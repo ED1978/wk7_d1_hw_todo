@@ -11,12 +11,20 @@
       <form v-on:submit.prevent="saveNewToDo">
         <label for="new-todo">Add New ToDo</label>
         <input type="text" id="new-todo" v-model="newToDo">
+
+        <input type="radio" id="low" name="priority" value="low" v-model="newPriority">
+        <label for="low">Low Priority</label>
+
+        <input type="radio" id="high" name="priority" value="high" v-model="newPriority">
+        <label for="low">High Priority</label>
+
         <input type="submit" value="Add New ToDo">
       </form>
 
       <ul>
         <li v-for="todo in toDos">
           <span>{{todo.task}}</span>
+          <span>{{todo.priority}}</span>
         </li>
       </ul>
 
