@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     el: "#app",
     data: {
       toDos:[
-        {task: "Laundry", priority: "low"},
-        {task: "Dishes", priority: "high"},
-        {task: "Shopping", priority: "high"}
+        {task: "Laundry", priority: false},
+        {task: "Dishes", priority: true},
+        {task: "Shopping", priority: true}
       ],
-      newToDo: ""
+      newToDo: "",
+      newPriority: null 
     },
     methods: {
       saveNewToDo: function() {
