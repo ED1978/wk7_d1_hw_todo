@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <script scr="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <form v-on:submit.prevent="saveNewToDo">
+        <label for="new_todo">Add New ToDo</label>
+        <input type="text" id="new-item" v-model="newToDo">
+        <input type="submit" value="Add New ToDo">
+      </form>
+    </div>
+  </body>
+</html>
